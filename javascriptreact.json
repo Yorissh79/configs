@@ -11,7 +11,7 @@
 	"SCSS Module Class": {
 		"prefix": "cls",
 		"body": [
-			"<div className={style.${1:name}>",
+			"<div className={style.${1:name}}>",
 			"  ",
 			"</div>"
 		],
