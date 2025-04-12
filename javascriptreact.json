@@ -8,6 +8,11 @@
 		],
 		"description": "Insert className with SCSS module style"
 	},
+	"SCSS Module Class inline": {
+		"prefix": "clsi",
+		"body": "className={style.${1:main}}",
+		"description": "Insert className with SCSS module style"
+	},
 	"SCSS Module Class": {
 		"prefix": "cls",
 		"body": [
