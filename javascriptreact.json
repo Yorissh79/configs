@@ -3,7 +3,7 @@
 		"prefix": "clsa",
 		"body": [
 			"<div className={style.main}>",
-			"  ${1:}",
+			"    ${1:}",
 			"</div>"
 		],
 		"description": "Insert className with SCSS module style"
@@ -13,11 +13,25 @@
 		"body": "className={style.${1:main}}",
 		"description": "Insert className with SCSS module style"
 	},
+	"CSS Module Class inline": {
+		"prefix": "tlsi",
+		"body": "className='${1:}'",
+		"description": "Insert className with CSS module style"
+	},
+	"CSS Module Class": {
+		"prefix": "tls",
+		"body": [
+			"<div className='${1:}'>",
+			"    ",
+			"</div>"
+		],
+		"description": "Insert className with SCSS module style"
+	},
 	"SCSS Module Class": {
 		"prefix": "cls",
 		"body": [
 			"<div className={style.${1:name}}>",
-			"  ",
+			"    ",
 			"</div>"
 		],
 		"description": "Insert className with SCSS module style"
@@ -29,11 +43,11 @@
 			"import style from './${1:ComponentName}.module.scss'",
 			"",
 			"const ${1:ComponentName} = () => {",
-			"  return (",
-			"    <div className={style.main}>",
+			"    return (",
+			"       <div className={style.main}>",
 			"",
-			"    </div>",
-			"  )",
+			"       </div>",
+			"    )",
 			"}",
 			"",
 			"export default ${1:ComponentName}"
@@ -47,11 +61,29 @@
 			"import style from './$TM_FILENAME_BASE.module.scss'",
 			"",
 			"const $TM_FILENAME_BASE = () => {",
-			"  return (",
-			"    <div className={style.main}>",
-			"      ${1:Go}",
-			"    </div>",
-			"  )",
+			"    return (",
+			"       <div className={style.main}>",
+			"           ${1:Go}",
+			"       </div>",
+			"    )",
+			"}",
+			"",
+			"export default $TM_FILENAME_BASE"
+		],
+		"description": "Creates a React Arrow Function Component with SCSS module import using the file name"
+	},
+	"React Arrow Function with CSS Module (Auto File Name)": {
+		"prefix": "tsa",
+		"body": [
+			"import React from 'react'",
+			"import './$TM_FILENAME_BASE.css'",
+			"",
+			"const $TM_FILENAME_BASE = () => {",
+			"    return (",
+			"       <div className=''>",
+			"           ${1:Go}",
+			"       </div>",
+			"    )",
 			"}",
 			"",
 			"export default $TM_FILENAME_BASE"
